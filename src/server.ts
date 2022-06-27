@@ -4,6 +4,7 @@ import { RootResolvers } from "./graphql/root-resolver";
 import { schema } from "./graphql/schema";
 import db from './firebase'
 import { VerifyUser } from "./middleware/auth.middleware";
+import appsettings from "./config/appsettings";
 
 const server = new ApolloServer({
     typeDefs: schema,
@@ -16,4 +17,4 @@ const server = new ApolloServer({
     }
 });
 
-server.listen({port: 8800}).then(({url})=>console.log(`Listening on url: ${url}`))
+server.listen({port: appsettings.appconfig.PORT}).then(({url})=>console.log(`ENV: [${appsettings.appconfig.ENV}] Listening on url: ${url}`))

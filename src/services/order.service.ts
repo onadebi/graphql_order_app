@@ -23,9 +23,8 @@ export class OrderService {
             }
             const resp = await this.appDbRef.add(newOrder); //await this.appDb.doc(newOrder.uid).set(newOrder);
             if (resp.path) {
-                newOrder.uid = resp.id; //.path.split('/')[1];
+                newOrder.uid = resp.id;
             }
-            console.log(JSON.stringify(resp.path.split('/')[1], null, 2));
             return resp.path ? newOrder : null;
         } catch (ex: any) {
             console.log(`Exception is ${ex.message}`)
@@ -59,9 +58,7 @@ export class OrderService {
             if (resp.exists) {
                 objResp = resp.data() as Order;
                 objResp.uid = resp.id;
-                console.log(`RESP DATA : ${JSON.stringify(objResp, null, 2)}`)
             }
-            console.log(`GET Response : ${JSON.stringify(resp, null, 2)}`);
         } catch (ex) {
             return null;
         }

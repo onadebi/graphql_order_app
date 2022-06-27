@@ -7,7 +7,7 @@ const appsettings = {
     authentication:{
         minPasswordLength: 6,
         secrete_key: "secreteKey_from_env_file",
-        tokenExpireDuration: 300
+        tokenExpireDuration: 900
     }
 }
 

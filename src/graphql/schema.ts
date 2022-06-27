@@ -10,7 +10,6 @@ export const schema = gql`
     },
 
     type Mutation{
-        # addCustomer(input: String!): Customer,
         addOrder(input: CreateOrderDtoInput): Order,
         deleteOrder(orderId: ID!): Boolean!,
         updateOrder(orderId: ID!, input: UpdateOrderDtoInput): SuccessResponse!,
@@ -24,9 +23,6 @@ export const schema = gql`
     email: String!,
     name: String!,
     phone: String!,
-    # address: Address,
-    # createdAt: Int!,
-    # updatedAt: Int!,
     },
 
     type Address{
@@ -35,8 +31,6 @@ export const schema = gql`
         country: String!,
         street: String!,
         zip: String!,
-        created_at: Float!
-        updated_at: Float!
     },
 
     type Order{
@@ -44,7 +38,7 @@ export const schema = gql`
         title: String!
         bookingDate:Float!
         customer: Customer!
-        updated_at: Float!
+        # updated_at: Float!
         address:Address!
     },
 

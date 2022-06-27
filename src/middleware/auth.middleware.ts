@@ -8,7 +8,6 @@ export const VerifyUser=(token: string): {email: string, authId: string} | null=
     try {
         token = token.split(' ')[1];
         const verified = jwt.verify(token,appsettings.authentication.secrete_key!) as { email: string, authId: string};
-        console.log(`VERIFIED Credentials is >>> ${JSON.stringify(verified)}`)
         user = verified;
     } catch (errr) {
         throw new ApolloError('Unauthorized- Access denied!')

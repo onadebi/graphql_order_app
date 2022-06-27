@@ -16,7 +16,8 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "dev": "nodemon --exec ts-node src/server.ts"
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "start": "ts-node src/server.ts"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",

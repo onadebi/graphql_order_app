@@ -35,16 +35,11 @@ class MyFactory{
     GetInstance=<T> (TCreate: new() => T): T => new TCreate();  
 } 
 
-
-
-
 export const allServices ={
     GetOrderService,
     GetCustomerService,
 
 }
-
-
 // const result = new Factory<OrderService>(OrderService).GetIstance();
 // const another = new MyFactory().GetInstance(OrderService);
 

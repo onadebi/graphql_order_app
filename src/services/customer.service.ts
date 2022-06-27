@@ -1,15 +1,13 @@
 import db from "../firebase";
-import { CreateOrderDto, Order } from "../models/order";
-import { v4 as uuid } from 'uuid';
+import { Order } from "../models/order";
 import { IPagingFilterInput } from "../interfaces/common/IPagingFilterInput";
 import { User } from "../models/user";
-import {IUserLoginResponseDto, IUserRegistration, IUserLogin } from "../interfaces/IUserRegistration";
+import {IUserRegistration, IUserLogin } from "../interfaces/IUserRegistration";
 import { ISuccessResponse } from "../interfaces/common/ISuccessResponse";
 import { auth } from "firebase-admin";
 import jwt from 'jsonwebtoken';
 import { Encrypt } from "../middleware/auth.middleware";
 import bcrypt from 'bcryptjs';
-import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import appsettings from "../config/appsettings";
 
 export class CustomerService {

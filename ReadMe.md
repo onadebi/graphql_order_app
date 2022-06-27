@@ -3,6 +3,10 @@
 >2. run: *yarn install* to download packages
 >3. run *yarn start* to run locally and *yarn dev* to run development mode
 
+ # Public url at: 
+ > [GraphQL Users Orders testapp ](https://ordertestapp.herokuapp.com/)
+
+
 # Sample Scripts
 > # Mutations sample
 
@@ -21,8 +25,8 @@ mutation {
 
 
   userLogin(login:{
-    email:"onaefe@onaxsys.com",
-    password:"onadebi"
+    email:"onaefe@gmail.com",
+    password:"j.doeP@55w0ed"
   }){
     success
     message
@@ -97,6 +101,7 @@ addOrder(input:{
 ```
 
 > # Query samples
+> 
 ```
 {
   getUsers(paging:{page:0,pageSize: 10}){

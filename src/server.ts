@@ -9,6 +9,7 @@ import appsettings from "./config/appsettings";
 const server = new ApolloServer({
     typeDefs: schema,
     resolvers: RootResolvers,
+    introspection: true,
     plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
     context: ({req})=>{
         const headerz = req.headers.host;
